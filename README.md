@@ -24,6 +24,7 @@ Przykładowe wyniki wywołania metody: "*Ace of Spades*", "*7 of Clubs*".
 #### 1. Stwórz klasę *StandarDeck*, która dziedziczy po klasie *Deck* (1 pkt.)
 
 #### 2. Stwórz kolekcję do przechowywania kart (3 pkt.)
+Talia powinna być domyślnie wypełniona 52 kartami.
 
 #### 3. Napisz implementację dla metod z klasy *Deck* korzystając z kolekcji z punktu 2. (5 pkt.)
 
