@@ -4,7 +4,7 @@ import java.util.Objects;
 
 /**
  * The class constitutes single card from most common pack of playing cards used today.
- * Each card is {@code Object} represented by its own rank and suit.
+ * Each card is {@code Object} represented by two attributes - rank and suit.
  */
 
 public class Card {
