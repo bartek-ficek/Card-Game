@@ -8,9 +8,16 @@ public class StandardDeck extends Deck {
     private String[] standardRanks;
     private String[] standardSuits;
 
-
     public StandardDeck() {
         reset();
+    }
+
+    public String[] getStandardRanks() {
+        return standardRanks;
+    }
+
+    public String[] getStandardSuits() {
+        return standardSuits;
     }
 
     @Override
@@ -31,8 +38,11 @@ public class StandardDeck extends Deck {
     @Override
     public void reset() {
         standardDeck = new ArrayList<Card>();
-        standardRanks = new String[]{"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
-        standardSuits = new String[]{"Clubs", "Diamonds", "Hearts", "Spades"};
+        standardRanks = new String[]
+                {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
+        standardSuits = new String[]
+                {"Spades", "Clubs", "Diamonds", "Hearts"};
+
         for (String rank : standardRanks) {
             for (String suit : standardSuits) {
                 this.standardDeck.add(new Card(rank, suit));

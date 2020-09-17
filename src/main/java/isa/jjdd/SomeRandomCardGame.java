@@ -25,7 +25,7 @@ public class SomeRandomCardGame {
         STDOUT.info("Started some random card game!\n");
 
         deck.shuffle(SHUFFLE_COUNT);
-        STDOUT.info(String.format("Deck was shuffled %d times\n", SHUFFLE_COUNT));
+        STDOUT.info(String.format("Deck was shuffled %d times\n\n", SHUFFLE_COUNT));
 
         Player player1 = new Player();
         player1.setCards(deck.draw(PLAYER_CARDS));
@@ -33,7 +33,7 @@ public class SomeRandomCardGame {
 
         Player player2 = new Player();
         player2.setCards(deck.draw(PLAYER_CARDS));
-        STDOUT.info(String.format("Player 2 drawn %d cards\n", PLAYER_CARDS));
+        STDOUT.info(String.format("Player 2 drawn %d cards\n\n", PLAYER_CARDS));
 
         for (int i = 0; i < PLAYER_CARDS; i++) {
             Card player1Card = player1.getNextCard();
@@ -45,10 +45,10 @@ public class SomeRandomCardGame {
             int result = comparator.compare(player1Card, player2Card);
 
             if (result > 0) {
-                STDOUT.info("Player 1 scored a point\n");
+                STDOUT.info("Player 1 scored a point\n\n");
                 player1.score();
             } else {
-                STDOUT.info("Player 2 scored a point\n");
+                STDOUT.info("Player 2 scored a point\n\n");
                 player2.score();
             }
         }
