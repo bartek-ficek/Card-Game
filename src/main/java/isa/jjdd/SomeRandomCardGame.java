@@ -10,7 +10,7 @@ import java.util.Comparator;
 
 public class SomeRandomCardGame {
     private static final Logger STDOUT = LoggerFactory.getLogger("CONSOLE_OUT");
-    private static final int PLAYER_CARDS = 5;
+    private static final int PLAYER_CARDS = 10;
     private static final int SHUFFLE_COUNT = 3;
 
     private final Comparator<Card> comparator;
@@ -47,7 +47,9 @@ public class SomeRandomCardGame {
             if (result > 0) {
                 STDOUT.info("Player 1 scored a point\n\n");
                 player1.score();
-            } else {
+            } if (result == 0) {
+                STDOUT.info("Two JOKERS! Equal cards! Nobody got a point! \n\n");
+            } else if (result < 0)  {
                 STDOUT.info("Player 2 scored a point\n\n");
                 player2.score();
             }
@@ -55,7 +57,9 @@ public class SomeRandomCardGame {
 
         if (player1.getPoints() > player2.getPoints()) {
             STDOUT.info("Player 1 WINS!\n");
-        } else {
+        } if (player1.getPoints() == player2.getPoints()) {
+            STDOUT.info("Players got same amount of Points! It's DRAW!\n");
+        } else if (player1.getPoints() < player2.getPoints()) {
             STDOUT.info("Player 2 WINS!\n");
         }
     }

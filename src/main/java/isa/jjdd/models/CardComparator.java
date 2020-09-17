@@ -9,6 +9,7 @@ import java.util.Map;
 
 public class CardComparator implements Comparator<Card> {
 
+    public static final int POWER_OF_JOKER = 13;
     private static final Logger STDOUT = LoggerFactory.getLogger("CONSOLE_OUT");
     private final Map<String, Integer> MAP_OF_RANK_POWERS;
     private final Map<String, Integer> MAP_OF_SUIT_POWERS;
@@ -19,12 +20,14 @@ public class CardComparator implements Comparator<Card> {
         StandardDeck usefulObject = new StandardDeck();
         final String[] standardRanks = usefulObject.getStandardRanks();
         final String[] standardSuits = usefulObject.getStandardSuits();
+
         for (int i = 0; i < standardRanks.length; i++) {
             MAP_OF_RANK_POWERS.put(standardRanks[i], (Integer) i);
         }
         for (int j = 0; j < standardSuits.length; j++) {
             MAP_OF_SUIT_POWERS.put(standardSuits[j], (Integer) j);
         }
+        MAP_OF_RANK_POWERS.put("JOKER",(Integer) POWER_OF_JOKER);
     }
 
     @Override

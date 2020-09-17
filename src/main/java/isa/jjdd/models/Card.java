@@ -13,13 +13,13 @@ public class Card {
      * The rank of the card represented by String.
      * One of the two major attribute of Card.
      */
-    private final String rank;
+    protected final String rank;
 
     /**
      * The suit of the card represented by String.
      * One of the two major attribute of Card.
      */
-    private final String suit;
+    protected final String suit;
 
     /**
      * Constructs single Card with the specified

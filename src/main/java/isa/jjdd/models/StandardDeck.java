@@ -5,8 +5,10 @@ import java.util.*;
 public class StandardDeck extends Deck {
 
     private List<Card> standardDeck;
+    private List<JokerCard> jokers;
     private String[] standardRanks;
     private String[] standardSuits;
+
 
     public StandardDeck() {
         reset();
@@ -48,6 +50,10 @@ public class StandardDeck extends Deck {
                 this.standardDeck.add(new Card(rank, suit));
             }
         }
+        jokers = new ArrayList<JokerCard>();
+        jokers.add(new JokerCard("JOKER","Black"));
+        jokers.add(new JokerCard("JOKER","Red"));
+        standardDeck.addAll(jokers);
     }
 
     @Override
