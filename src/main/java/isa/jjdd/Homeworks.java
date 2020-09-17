@@ -1,6 +1,10 @@
 package isa.jjdd;
 
 import isa.jjdd.models.Card;
+import isa.jjdd.models.StandardDeck;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Homeworks {
     public static void main(String[] args) {
@@ -8,8 +12,13 @@ public class Homeworks {
 //        SomeRandomCardGame game = new SomeRandomCardGame(null, null);
 //        game.startGame();
 
-        Card aceOfSpades = new Card("Ace","Spades");
-        System.out.println(aceOfSpades.toString());
+        StandardDeck decka = new StandardDeck();
+        System.out.println(decka.draw());
+
+        System.out.println("------------------------------------");
+        System.out.println(decka.draw(51));
+
+        System.out.println(decka.draw(decka.size()));
 
     }
 }
